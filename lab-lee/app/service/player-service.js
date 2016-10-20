@@ -13,7 +13,7 @@ function playerService($q, $log, mapService) {
   let turn = 0;
   let player = service.player = {
     name: 'Blackbeard',
-    location: 'Your ship. Arr',
+    location: 'areaA',
     booty: 20,
   };
   let history = service.history = [{
@@ -23,11 +23,11 @@ function playerService($q, $log, mapService) {
   },
 ];
 
-  service.movePlayer = function(choice) {
+  service.movePlayer = function(direction) {
     return new $q((resolve, reject) => {
       turn++;
       let currentLocation = player.location;
-      let newLocation = mapService.mapData[currentLocation][choice];
+      let newLocation = mapService.mapData[currentLocation][direction];
       if (!newLocation) {
         history.unshift({
           turn,
