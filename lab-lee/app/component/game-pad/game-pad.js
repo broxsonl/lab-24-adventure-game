@@ -1,5 +1,7 @@
 'use strict';
 
+require('./_game-pad.scss');
+
 const angular = require('angular');
 const pirateAdventure = angular.module('pirateAdventure');
 

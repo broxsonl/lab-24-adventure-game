@@ -11,17 +11,20 @@ function playerService($q, $log, mapService) {
   let service = {};
 
   let turn = 0;
+
   let player = service.player = {
     name: 'Blackbeard',
     location: 'areaA',
     booty: 20,
   };
-  let history = service.history = [{
-    turn: 0,
-    desc: 'Welcome to the high seas, matey!',
-    booty: player.booty,
-  },
-];
+
+  let history = service.history = [
+    {
+      turn: 0,
+      desc: 'Welcome to the high seas, matey!',
+      booty: player.booty,
+    },
+  ];
 
   service.movePlayer = function(direction) {
     return new $q((resolve, reject) => {
@@ -38,7 +41,6 @@ function playerService($q, $log, mapService) {
         console.log('history', history);
         return reject('Bad choice');
       }
-
       history.unshift({
         turn,
         location: player.location,

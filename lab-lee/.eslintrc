@@ -14,11 +14,12 @@
     "jasmine": true
   },
   "globals": {
+    "angular": true,
   },
   "ecmaFeatures": {
     "modules": true,
     "experimentalObjectRestSpread": true,
-    "impliedStrict": true
+    "impliedStrict": true,
   },
   "extends": "eslint:recommended"
 }
