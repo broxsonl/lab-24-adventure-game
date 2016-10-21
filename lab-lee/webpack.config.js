@@ -38,7 +38,7 @@ module.exports = {
       },
       {
         test: /\.(woff|ttf|svg|eot).*/,
-        loader: 'url!limit=10000$name=font/[hash].[ext]',
+        loader: 'url?limit=10000$name=font/[hash].[ext]',
       },
     ],
   },
