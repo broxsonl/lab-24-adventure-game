@@ -1,5 +1,8 @@
 @import "theme";
 
 .game-pad {
-  color: $app-primary;
+  align-items: center;
+  button {
+    color: $app-primary;
+  }
 }
